@@ -6,4 +6,4 @@
 
 SELECT * 
 FROM
-RAW.GLOBALMART.CUSTOMER
+{{ source('globalmart', 'customer') }}

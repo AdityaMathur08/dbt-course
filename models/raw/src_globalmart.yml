@@ -1,0 +1,14 @@
+#In our models we donot want to refer tables directly with qualifier as in the database
+# Rather we need to maintain a yml file for changing in only one place.
+version: 2
+
+sources:
+    -   name: globalmart 
+        database: raw
+        schema: globalmart
+        tables:
+            -   name: customer
+            -   name: orders
+            -   name: product
+
+
