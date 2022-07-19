@@ -1,0 +1,24 @@
+#In our models we donot want to refer tables directly with qualifier as in the database
+# Rather we need to maintain a yml file for changing in only one place.
+version: 2
+
+sources:
+    -   name: globalmart
+        description: A clone of the Snowflake database
+        database: raw
+        schema: globalmart
+        tables:
+            -   name: customer
+            -   name: orders
+                description: raw orders table
+                columns:
+                  - name: orderid
+                    description: primary key for orders
+                    tests:
+                      - unique
+                      - not_null
+
+
+            -   name: product
+
+
